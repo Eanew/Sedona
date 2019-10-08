@@ -35,6 +35,55 @@
       </section>
 
       <section class="filter-results">
+        <form action="" method="get">
+          <div class="form-list">
+            <h3>Инфраструктура:</h3>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="pool" checked>Бассейн
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="parking">Парковка
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="wi-fi">Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="form-list">
+            <h3>Тип жилья:</h3>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="hotel" checked>Гостиница
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="motel" checked>Мотель
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="apartments" checked>Апартаменты
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price">
+            <h3>Стоимость в сутки (Р):</h3>
+          </div>
+
+          <button class="show-results" type="submit">Показать</button>
+        </form>
         <!-- Сортировка -->
         <h2 class="visually-hidden">Результаты поиска</h2>
 
