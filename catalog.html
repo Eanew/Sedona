@@ -32,12 +32,10 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры поиска</h2>
-      </section>
 
-      <section class="filter-results">
-        <form action="" method="get">
-          <div class="form-list">
-            <h3>Инфраструктура:</h3>
+        <form class="filter" action="" method="get">
+          <fieldset class="form-list">
+            <legend class="filter-legend">Инфраструктура:</legend>
             <ul>
               <li>
                 <label>
@@ -55,10 +53,10 @@
                 </label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div class="form-list">
-            <h3>Тип жилья:</h3>
+          <fieldset class="form-list">
+            <legend class="filter-legend">Тип жилья:</legend>
             <ul>
               <li>
                 <label>
@@ -76,15 +74,21 @@
                 </label>
               </li>
             </ul>
-          </div>
+          </fieldset>
 
-          <div class="price">
-            <h3>Стоимость в сутки (Р):</h3>
-          </div>
+          <div class="form-container">
+            <label for="">
+              <h3 class="filter-legend">Стоимость в сутки (Р):</h3>
+            </label>
+            <!-- Ползунок -->
 
-          <button class="show-results" type="submit">Показать</button>
+            <button class="show-results" type="submit">Показать</button>
+          </div>
         </form>
         <!-- Сортировка -->
+      </section>
+
+      <section class="filter-results">
         <h2 class="visually-hidden">Результаты поиска</h2>
 
         <ul class="hotel-list">
