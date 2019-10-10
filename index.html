@@ -165,40 +165,40 @@
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
 
-          <a class="search_pop-up" href="">Поиск гостиницы в Седоне</a>
+          <a class="button modal-button" href="">Поиск гостиницы в Седоне</a>
 
-          <form class="form_pop-up" action="" method="get">
-            <div class="choose-date">
-              <label>
-                Дата заезда:
-                <input type="text" name="date-in" value="24 апреля 2017">
-              </label>
-            </div>
-            <div class="choose-date">
-              <label>
-                Дата выезда:
-                <input type="text" name="date-out" value="4 июля 2017">
-              </label>
-            </div>
+          <form class="modal-window" action="" method="get">
+            <label class="choose-date">
+              <span class="label searchform-label">Дата заезда:</span>
+              <input type="text" name="date-in" placeholder="24 апреля 2017">
+            </label>
+
+            <label class="choose-date">
+              <span class="label searchform-label">Дата выезда:</span>
+              <input type="text" name="date-out" placeholder="4 июля 2017">
+            </label>
+
             <div class="people-count">
-              <label>
-                Взослые:
-                <input type="number" name="adults" min="1" value="2">
-              </label>
-            </div>
-            <div class="people-count">
-              <label>
-                Дети:
-                <input type="number" name="kids" min="0" value="0">
-              </label>
+              <div class="counter">
+                <label>
+                  <span class="label searchform-label">Взрослые:</span>
+                  <button class="button counter-button" type="button">Меньше</button>
+                  <input type="number" name="adults" min="1" value="2">
+                  <button class="button counter-button" type="button">Больше</button>
+                </label>
+              </div>
+
+              <div class="counter">
+                <label>
+                  <span class="label searchform-label">Дети:</span>
+                  <button class="button counter-button" type="button">Меньше</button>
+                  <input type="number" name="kids" min="0" value="0">
+                  <button class="button counter-button" type="button">Больше</button>
+                </label>
+              </div>
             </div>
             <button type="submit">Найти</button>
           </form>
-
-        </div>
-
-        <div class="states-map">
-          <img src="" width="1200" height="593" alt="Гостиницы на карте Седоны">
         </div>
 
       </section>

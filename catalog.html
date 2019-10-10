@@ -34,56 +34,54 @@
         <h2 class="visually-hidden">Фильтры поиска</h2>
 
         <form class="filter" action="" method="get">
-          <fieldset class="form-list">
+          <fieldset class="checkbox-column">
             <legend class="filter-legend">Инфраструктура:</legend>
-            <ul>
-              <li>
-                <label>
-                  <input type="checkbox" name="pool" checked>Бассейн
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="parking">Парковка
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="wi-fi">Wi-Fi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="form-list">
-            <legend class="filter-legend">Тип жилья:</legend>
-            <ul>
-              <li>
-                <label>
-                  <input type="checkbox" name="hotel" checked>Гостиница
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="motel" checked>Мотель
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" name="apartments" checked>Апартаменты
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <div class="form-container">
-            <label for="">
-              <h3 class="filter-legend">Стоимость в сутки (Р):</h3>
+            <label>
+              <input type="checkbox" name="pool" checked><span class="label filter-label">Бассейн</span>
             </label>
-            <!-- Ползунок -->
+            <label>
+              <input type="checkbox" name="parking"><span class="label filter-label">Парковка</span>
+            </label>
+            <label>
+              <input type="checkbox" name="wi-fi"><span class="label filter-label">Wi-Fi</span>
+            </label>
+          </fieldset>
 
-            <button class="show-results" type="submit">Показать</button>
-          </div>
+          <fieldset class="checkbox-column">
+            <legend class="filter-legend">Тип жилья:</legend>
+            <label>
+              <input type="checkbox" name="hotel" checked><span class="label filter-label">Гостиница</span>
+            </label>
+            <label>
+              <input type="checkbox" name="motel" checked><span class="label filter-label">Мотель</span>
+            </label>
+            <label>
+              <input type="checkbox" name="apartments" checked><span class="label filter-label">Апартаменты</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="price-column">
+            <legend class="filter-legend">Стоимость в сутки (Р):</legend>
+            <div class="price-range">
+              <label class="price-count">
+                <span class="label price-label">от</span>
+                <input type="number" name="price_from" value="0" readonly>
+              </label>
+              <label class="price-count">
+                  <span class="label price-label">до</span>
+                  <input type="number" name="price_to" value="3000" readonly>
+              </label>
+            </div>
+            <div class="range-slider">
+              <div class="line inactive-line"></div>
+              <div class="line active-line"></div>
+              <button class="slider-button range_from" type="button"></button>
+              <button class="slider-button range_to" type="button"></button>
+            </div>
+
+            <button class="button show-results" type="submit">Показать</button>
+
+          </fieldset>
         </form>
         <!-- Сортировка -->
       </section>
