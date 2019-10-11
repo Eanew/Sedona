@@ -112,7 +112,7 @@
         </div>
 
         <div class="advantage-row">
-          <div class="advantage different-bg">
+          <div class="advantage bg-different">
             <h3>
               Небольшая площадь
             </h3>
@@ -126,7 +126,7 @@
             </p>
           </div>
 
-          <div class="advantage different-bg">
+          <div class="advantage bg-different">
             <h3>
               Красивая дорога
             </h3>
@@ -140,7 +140,7 @@
             </p>
           </div>
 
-          <div class="advantage different-bg">
+          <div class="advantage bg-different">
             <h3>
               Мало туристов
             </h3>
@@ -167,7 +167,7 @@
 
           <a class="button modal-button" href="">Поиск гостиницы в Седоне</a>
 
-          <form class="modal-window" action="" method="get">
+          <form class="searchform" action="" method="get">
             <label class="choose-date">
               <span class="label searchform-label">Дата заезда:</span>
               <input type="text" name="date-in" placeholder="24 апреля 2017">
@@ -179,25 +179,21 @@
             </label>
 
             <div class="people-count">
-              <div class="counter">
-                <label>
-                  <span class="label searchform-label">Взрослые:</span>
-                  <button class="button counter-button" type="button">Меньше</button>
-                  <input type="number" name="adults" min="1" value="2">
-                  <button class="button counter-button" type="button">Больше</button>
-                </label>
-              </div>
+              <label class="counter">
+                <span class="label searchform-label">Взрослые:</span>
+                <button class="button counter-button" type="button" readonly>Меньше</button>
+                <input type="number" name="adults" min="1" value="2">
+                <button class="button counter-button" type="button" readonly>Больше</button>
+              </label>
 
-              <div class="counter">
-                <label>
-                  <span class="label searchform-label">Дети:</span>
-                  <button class="button counter-button" type="button">Меньше</button>
-                  <input type="number" name="kids" min="0" value="0">
-                  <button class="button counter-button" type="button">Больше</button>
-                </label>
-              </div>
+              <label class="counter">
+                <span class="label searchform-label">Дети:</span>
+                <button class="button counter-button" type="button">Меньше</button>
+                <input type="number" name="kids" min="0" value="0">
+                <button class="button counter-button" type="button">Больше</button>
+              </label>
             </div>
-            <button type="submit">Найти</button>
+            <button class="button searchform-button" type="submit">Найти</button>
           </form>
         </div>
 

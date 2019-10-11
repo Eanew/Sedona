@@ -65,29 +65,45 @@
             <div class="price-range">
               <label class="price-count">
                 <span class="label price-label">от</span>
-                <input type="number" name="price_from" value="0" readonly>
+                <input type="number" name="price-from" value="0" readonly>
               </label>
               <label class="price-count">
                   <span class="label price-label">до</span>
-                  <input type="number" name="price_to" value="3000" readonly>
+                  <input type="number" name="price-to" value="3000" readonly>
               </label>
             </div>
+
             <div class="range-slider">
               <div class="line inactive-line"></div>
               <div class="line active-line"></div>
-              <button class="slider-button range_from" type="button"></button>
-              <button class="slider-button range_to" type="button"></button>
+              <label for="range-from" class="visually-hidden">Ползунок выбора минимальной цены</label>
+              <button class="slider-button range-from" id="range-from" type="button"></button>
+              <label for="range-to" class="visually-hidden">Ползунок выбора максимальной цены</label>
+              <button class="slider-button range-to" id="range-to" type="button"></button>
             </div>
 
             <button class="button show-results" type="submit">Показать</button>
 
           </fieldset>
         </form>
-        <!-- Сортировка -->
       </section>
 
       <section class="filter-results">
         <h2 class="visually-hidden">Результаты поиска</h2>
+
+        <div class="sorting">
+          <span class="hotels-found">Найдено: 3</span>
+          <h3 class="sorting-header">Сортировка:</h3>
+          <ul class="sorting-select">
+            <li><a class="sorting-type current" href="">По цене</a></li>
+            <li><a class="sorting-type" href="">По типу</a></li>
+            <li><a class="sorting-type" href="">По рейтингу</a></li>
+          </ul>
+          <ul class="sorting-mode">
+            <li><a class="ascending" href="" title="По возрастанию">По возрастанию</a></li>
+            <li><a class="descending current" href="" title="По убыванию">По убыванию</a></li>
+          </ul>
+        </div>
 
         <ul class="hotel-list">
           <li class="hotel-preview">
@@ -96,9 +112,9 @@
             </div>
 
             <div class="details-container">
-              <h3 class="hotel-heading">
+              <h4 class="hotel-heading">
                 <a href="">Amara Resort & Spa</a>
-              </h3>
+              </h4>
 
               <div class="short-info">
                 <span class="hotel-attribute">Гостиница</span>
@@ -106,8 +122,8 @@
               </div>
 
               <div class="preview-buttons">
-                <a class="preview-button" href="">Подробнее</a>
-                <a class="preview-button" href="">Забронировать</a>
+                <a class="button preview-button" href="">Подробнее</a>
+                <a class="button preview-button" href="">Забронировать</a>
               </div>
             </div>
 
@@ -122,9 +138,9 @@
             </div>
 
             <div class="details-container">
-              <h3 class="hotel-heading">
+              <h4 class="hotel-heading">
                 <a href="">Desert Quail Inn</a>
-              </h3>
+              </h4>
 
               <div class="short-info">
                 <span class="hotel-attribute">Мотель</span>
@@ -132,8 +148,8 @@
               </div>
 
               <div class="preview-buttons">
-                <a class="preview-button" href="">Подробнее</a>
-                <a class="preview-button" href="">Забронировать</a>
+                <a class="button preview-button" href="">Подробнее</a>
+                <a class="button preview-button" href="">Забронировать</a>
               </div>
             </div>
 
@@ -148,9 +164,9 @@
             </div>
 
             <div class="details-container">
-              <h3 class="hotel-heading">
+              <h4 class="hotel-heading">
                 <a href="">Villas at Poco Diablo</a>
-              </h3>
+              </h4>
 
               <div class="short-info">
                 <span class="hotel-attribute">Апартаменты</span>
@@ -158,8 +174,8 @@
               </div>
 
               <div class="preview-buttons">
-                <a class="preview-button" href="">Подробнее</a>
-                <a class="preview-button" href="">Забронировать</a>
+                <a class="button preview-button" href="">Подробнее</a>
+                <a class="button preview-button" href="">Забронировать</a>
               </div>
             </div>
 
