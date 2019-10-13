@@ -37,70 +37,71 @@
           <fieldset class="checkbox-column">
             <legend class="filter-legend">Инфраструктура:</legend>
             <label>
-              <input type="checkbox" name="pool" checked><span class="label filter-label">Бассейн</span>
+              <input type="checkbox" name="pool" value="" checked><span class="label">Бассейн</span>
             </label>
             <label>
-              <input type="checkbox" name="parking"><span class="label filter-label">Парковка</span>
+              <input type="checkbox" name="parking" value=""><span class="label">Парковка</span>
             </label>
             <label>
-              <input type="checkbox" name="wi-fi"><span class="label filter-label">Wi-Fi</span>
+              <input type="checkbox" name="wi-fi" value=""><span class="label">Wi-Fi</span>
             </label>
           </fieldset>
 
           <fieldset class="checkbox-column">
             <legend class="filter-legend">Тип жилья:</legend>
             <label>
-              <input type="checkbox" name="hotel" checked><span class="label filter-label">Гостиница</span>
+              <input type="checkbox" name="hotel" value="" checked><span class="label">Гостиница</span>
             </label>
             <label>
-              <input type="checkbox" name="motel" checked><span class="label filter-label">Мотель</span>
+              <input type="checkbox" name="motel" value="" checked><span class="label">Мотель</span>
             </label>
             <label>
-              <input type="checkbox" name="apartments" checked><span class="label filter-label">Апартаменты</span>
+              <input type="checkbox" name="apartments" value="" checked><span class="label">Апартаменты</span>
             </label>
           </fieldset>
 
-          <fieldset class="price-column">
-            <legend class="filter-legend">Стоимость в сутки (Р):</legend>
-            <div class="price-range">
-              <label class="price-count">
-                <span class="label price-label">от</span>
-                <input type="number" name="price-from" value="0" readonly>
-              </label>
-              <label class="price-count">
-                  <span class="label price-label">до</span>
-                  <input type="number" name="price-to" value="3000" readonly>
-              </label>
-            </div>
+          <div class="filter-container">
+            <fieldset class="price-column">
+              <legend class="filter-legend">Стоимость в сутки (Р):</legend>
+              <div class="price-range">
+                <label class="price-count">
+                  <span class="label">от</span>
+                  <input type="number" name="price-from" value="0" readonly>
+                </label>
+                <label class="price-count">
+                    <span class="label">до</span>
+                    <input type="number" name="price-to" value="3000" readonly>
+                </label>
+              </div>
 
-            <div class="range-slider">
-              <div class="price-line"></div>
-              <div class="price-line active"></div>
-              <button class="slider-button range-from" type="button">Ползунок выбора минимальной цены</button>
-              <button class="slider-button range-to" type="button">Ползунок выбора максимальной цены</button>
-            </div>
-
+              <div class="range-slider">
+                <div class="price-line"></div>
+                <div class="price-line active"></div>
+                <button class="slider-button range-from" type="button">Ползунок выбора минимальной цены</button>
+                <button class="slider-button range-to" type="button">Ползунок выбора максимальной цены</button>
+              </div>
+            </fieldset>
             <button class="button show-results" type="submit">Показать</button>
-
-          </fieldset>
+          </div>
         </form>
       </section>
 
       <section class="filter-results">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <!-- Сортировка ниже -->
         <div class="sorting">
+          <span class="hotels-found">
+            Найдено: <span class="results-count">3</span>
+          </span>
           <h3 class="sorting-header">Сортировка:</h3>
           <ul class="sorting-select">
             <li><a class="sorting-type current" href="">По цене</a></li>
             <li><a class="sorting-type" href="">По типу</a></li>
             <li><a class="sorting-type" href="">По рейтингу</a></li>
           </ul>
-          <ul class="sorting-mode">
-            <li><a class="ascending" href="" title="По возрастанию">По возрастанию</a></li>
-            <li><a class="descending current" href="" title="По убыванию">По убыванию</a></li>
+          <ul class="sorting-select">
+            <li><a class="sorting-mode" href="" title="По возрастанию">По возрастанию</a></li>
+            <li><a class="sorting-mode current" href="" title="По убыванию">По убыванию</a></li>
           </ul>
-          <span class="hotels-found">Найдено: 3</span>
         </div>
 
         <ul class="hotel-list">
