@@ -2,27 +2,19 @@
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-v11-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  font-weight: normal;
   src: local("PT Sans"), local("PTSans-Regular"),
-       url("../fonts/pt-sans-v11-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
        url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff2") format("woff2"), /* Super Modern Browsers */
        url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff") format("woff"), /* Modern Browsers */
-       url("../fonts/pt-sans-v11-latin_cyrillic-regular.ttf") format("truetype"), /* Safari, Android, iOS */
-       url("../fonts/pt-sans-v11-latin_cyrillic-regular.svg#PTSans") format("svg"); /* Legacy iOS */
 }
 /* pt-sans-700 - latin_cyrillic */
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-v11-latin_cyrillic-700.eot"); /* IE9 Compat Modes */
+  font-weight: bold;
   src: local("PT Sans Bold"), local("PTSans-Bold"),
-       url("../fonts/pt-sans-v11-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"), /* Super Modern Browsers */
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff"), /* Modern Browsers */
-       url("../fonts/pt-sans-v11-latin_cyrillic-700.ttf") format("truetype"), /* Safari, Android, iOS */
-       url("../fonts/pt-sans-v11-latin_cyrillic-700.svg#PTSans") format("svg"); /* Legacy iOS */
 }
 
 html {
@@ -38,7 +30,7 @@ html {
 body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 1.86em;
   text-transform: uppercase;
   color: #000000;
   margin: 0;
@@ -47,6 +39,8 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -60,8 +54,8 @@ a {
 }
 
 .header {
-  background-image: url("../img/intro-mask.svg"), url("../img/background photo.jpg");
-  background-color: gray;
+  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
+  background-color: #c7996d;
   background-size: 1200px 58px, cover;
   background-position: left 0px bottom 0px, left 0px top 0px;
   background-repeat: no-repeat, no-repeat;
@@ -69,7 +63,6 @@ a {
 
 .main-logo {
   position: absolute;
-  margin-left: 530px;
 }
 
 .main-navigation {
@@ -80,7 +73,6 @@ a {
 
 .navigation-list li {
   width: 239px;
-  height: 56px;
 }
 
 .navigation-list a {
@@ -118,7 +110,6 @@ a.navigation-current {
 
 .advantage {
   width: 400px;
-  height: 256px;
   text-align: center;
   line-height: 1.5em;
   color: #ffffff;
@@ -141,7 +132,6 @@ a.navigation-current {
 
 .advise {
   width: 400px;
-  height: 330px;
   line-height: 1.5em;
   text-align: center;
   color: #333333;
@@ -223,7 +213,6 @@ a.navigation-current {
 
 .choose-date input {
   width: 346px;
-  height: 38px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -270,7 +259,6 @@ a.navigation-current {
 
 .searchform-button {
   width: 458px;
-  height: 58px;
   font-size: 21px;
   font-weight: bold;
   color: #ffffff;
@@ -300,11 +288,21 @@ a.navigation-current {
   text-align: center;
 }
 
-.visit-us li {
+.visit-us a {
   font-size: 0;
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
+  display: inline-block;
+}
+
+.visit-us a:hover,
+.visit-us a:focus {
+  background-color: #669ec0;
+}
+
+.visit-us a:active {
+  background-color: #5496bd;
 }
 
 .copyright {
@@ -315,9 +313,13 @@ a.navigation-current {
   font-size: 0;
 }
 
+.catalog {
+  text-align: left;
+}
+
 .filters {
   background-image: url("../img/filter background.jpg");
-  background-color: skyblue;
+  background-color: #81b3d2;
   background-size: 1200px 563px;
 }
 
@@ -330,12 +332,10 @@ a.navigation-current {
   font-size: 16px;
   line-height: 1.31em;
   font-weight: bold;
-  text-align: left;
 }
 
 .checkbox-label {
   line-height: 1.5em;
-  text-align: left;
 }
 
 .price-count .label {
@@ -351,6 +351,12 @@ a.navigation-current {
   border: solid 2px #ffffff;
   text-transform: uppercase;
   background: transparent;
+}
+
+.show-results:hover,
+.show-results:focus {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .price-line {
@@ -369,10 +375,6 @@ a.navigation-current {
   background-color: #ffffff;
 }
 
-.sorting {
-  text-align: left;
-}
-
 .hotels-found {
   font-size: 21px;
   font-weight: bold;
@@ -380,8 +382,8 @@ a.navigation-current {
 
 .sorting-header,
 .sorting-type {
-  font-size: 10.5px;
-  line-height: 1.67em;
+  font-size: 12px;
+  line-height: 1.5em;
 }
 
 .sorting-type {
@@ -394,11 +396,21 @@ a.navigation-current {
   text-decoration: none;
 }
 
+.sorting-type:hover,
+.sorting-type:focus {
+  color: #81b3d2;
+}
+
+.sorting-type:active {
+  color: #000000;
+  text-decoration: none;
+}
+
 .sorting-mode {
   font-size: 0px;
   display: inline-block;
 }
-
+/* Потом поменяю на svg */
 .sorting-mode::before {
   border-style: solid;
   border-width: 10px 5.5px;
@@ -431,17 +443,24 @@ a.navigation-current {
   font-size: 21px;
   font-weight: bold;
   color: #000000;
-  text-align: left;
+}
+
+.hotel-heading a:hover,
+.hotel-heading a:focus {
+  color: #81b3d2;
+}
+
+.hotel-heading a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-attribute {
   line-height: 1.5em;
   color: #333333;
-  text-align: left;
 }
 
 .preview-button {
-  padding: 3px 17px;
+  padding: 4px 17px;
   line-height: 1.5em;
   font-weight: bold;
   color: #ffffff;
@@ -450,25 +469,40 @@ a.navigation-current {
   display: inline-block;
 }
 
+.preview-button:hover,
+.preview-button:focus {
+  background-color: #669ec0;
+}
+
+.preview-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
 .preview-button:nth-child(2n) {
-  padding: 3px 16px;
+  padding: 4px 16px;
   background-color: #766357;
 }
 
+.preview-button:nth-child(2n):hover,
+.preview-button:nth-child(2n):focus {
+  background-color: #604e43;
+}
+
+.preview-button:nth-child(2n):active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
 .raiting {
+  width: 110px;
+  padding: 4px;
+  padding-left: 16px;
   line-height: 1.5em;
   color: #666666;
-  text-align: center;
   background-color: #f2f2f2;
+  display: inline-block;
 }
-
-.raiting > span {
-  padding: 3px 16px 13px 3px;
-}
-
-
-
-
 
 .catalog-footer {
   background-color: #ffffff;
