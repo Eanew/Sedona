@@ -2,7 +2,7 @@
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: local("PT Sans"), local("PTSans-Regular"),
        url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff2") format("woff2"), /* Super Modern Browsers */
        url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff") format("woff"), /* Modern Browsers */
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   src: local("PT Sans Bold"), local("PTSans-Bold"),
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"), /* Super Modern Browsers */
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff"), /* Modern Browsers */
@@ -66,7 +66,7 @@ a {
 }
 
 .main-navigation {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   background-color: #ffffff;
 }
@@ -101,7 +101,7 @@ a.navigation-current {
 
 .advantage-list h2 {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .advantage-list p {
@@ -123,7 +123,7 @@ a.navigation-current {
 
 .advantage h3 {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .color-different h3 {
@@ -156,7 +156,7 @@ a.navigation-current {
 
 .advise dt {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -174,19 +174,19 @@ a.navigation-current {
 .find-hotel h2 {
   font-size: 30px;
   line-height: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 
 .modal-button {
   width: 568px;
-  height: 86px;
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
   background-color: #766357;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .modal-button:hover,
@@ -206,14 +206,14 @@ a.navigation-current {
 }
 
 .searchform .label {
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
   color: #000000;
 }
 
 .choose-date input {
   width: 346px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   background-color: #f2f2f2;
   border: none;
@@ -234,6 +234,7 @@ a.navigation-current {
   height: 22px;
   font-size: 0px;
   display: inline-block;
+  vertical-align: center;
   background-color: #a9a9a9;
   background-image: url("../img/calendar.svg");
   background-repeat: no-repeat;
@@ -243,14 +244,13 @@ a.navigation-current {
 .counter input,
 .counter button {
   width: 38px;
-  height: 38px;
   background-color: #f2f2f2;
   border: none;
 }
 
 .counter input {
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .counter button {
@@ -260,7 +260,7 @@ a.navigation-current {
 .searchform-button {
   width: 458px;
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #81b3d2;
@@ -278,22 +278,21 @@ a.navigation-current {
 }
 
 .footer {
-  width: 1200px;
   opacity: 0.9;
 }
 
 .hash-tag {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 }
 
 .visit-us a {
   font-size: 0;
   width: 46px;
-  height: 48px;
   background-color: #81b3d2;
   display: inline-block;
+  vertical-align: center;
 }
 
 .visit-us a:hover,
@@ -318,7 +317,7 @@ a.navigation-current {
 }
 
 .filters {
-  background-image: url("../img/filter background.jpg");
+  background-image: url("../img/filter-background.jpg");
   background-color: #81b3d2;
   background-size: 1200px 563px;
 }
@@ -331,7 +330,7 @@ a.navigation-current {
 .filter-legend {
   font-size: 16px;
   line-height: 1.31em;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .checkbox-label {
@@ -377,7 +376,7 @@ a.navigation-current {
 
 .hotels-found {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .sorting-header,
@@ -388,12 +387,12 @@ a.navigation-current {
 
 .sorting-type {
   color: rgba(0, 0, 0, 0.3);
-  text-decoration: underline dotted #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
 }
 
-.sorting-type.current {
+.sorting-type-current {
   color: #81b3d2;
-  text-decoration: none;
+  border: none;
 }
 
 .sorting-type:hover,
@@ -403,12 +402,13 @@ a.navigation-current {
 
 .sorting-type:active {
   color: #000000;
-  text-decoration: none;
+  border: none;
 }
 
 .sorting-mode {
   font-size: 0px;
   display: inline-block;
+  vertical-align: center;
 }
 /* Потом поменяю на svg */
 .sorting-mode::before {
@@ -417,6 +417,7 @@ a.navigation-current {
   border-color: #cacaca transparent;
   content: "";
   display: inline-block;
+  vertical-align: center;
 }
 
 .ascending::before {
@@ -427,7 +428,7 @@ a.navigation-current {
   border-bottom: 0px;
 }
 
-.sorting-mode.current::before {
+.sorting-mode-current::before {
   border-color: #81b3d2 transparent;
 }
 
@@ -441,7 +442,7 @@ a.navigation-current {
 
 .hotel-heading a {
   font-size: 21px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -462,11 +463,12 @@ a.navigation-current {
 .preview-button {
   padding: 4px 17px;
   line-height: 1.5em;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2;
   text-align: center;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .preview-button:hover,
@@ -501,7 +503,11 @@ a.navigation-current {
   line-height: 1.5em;
   color: #666666;
   background-color: #f2f2f2;
+  line-height: 1.5em;
+  color: #666666;
+  background-color: #f2f2f2;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .catalog-footer {
