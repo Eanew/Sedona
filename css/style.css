@@ -17,6 +17,19 @@
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff"), /* Modern Browsers */
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -50,19 +63,25 @@ a {
 .content {
   width: 1200px;
   margin: 0 auto;
+  padding-top: 1px;
   box-shadow: 0 0 3px 0;
+  background-image: url("../img/background-photo.jpg");
+  background-size: content;
+  background-repeat: no-repeat;
 }
 
 .header {
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-color: #c7996d;
   background-size: 1200px 58px, cover;
-  background-position: left 0px bottom 0px, left 0px top 0px;
+  background-position: left 0px bottom 0px, left 0px top -1px;
   background-repeat: no-repeat, no-repeat;
 }
 
 .main-logo {
   position: absolute;
+  top: -1px;
+  left: 530px;
 }
 
 .main-navigation {
@@ -71,8 +90,18 @@ a {
   background-color: #ffffff;
 }
 
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navigation-list li {
   width: 239px;
+  padding: 15px 0;
+}
+
+.navigation-list li:nth-of-type(3n) {
+  margin-left: auto;
 }
 
 .navigation-list a {
@@ -234,7 +263,7 @@ a.navigation-current {
   height: 22px;
   font-size: 0px;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   background-color: #a9a9a9;
   background-image: url("../img/calendar.svg");
   background-repeat: no-repeat;
@@ -292,7 +321,7 @@ a.navigation-current {
   width: 46px;
   background-color: #81b3d2;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .visit-us a:hover,
@@ -408,7 +437,7 @@ a.navigation-current {
 .sorting-mode {
   font-size: 0px;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 /* Потом поменяю на svg */
 .sorting-mode::before {
@@ -417,7 +446,7 @@ a.navigation-current {
   border-color: #cacaca transparent;
   content: "";
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .ascending::before {
