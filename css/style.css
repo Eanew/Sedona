@@ -63,24 +63,20 @@ a {
 .content {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 1px;
-  box-shadow: 0 0 3px 0;
-  background-image: url("../img/background-photo.jpg");
-  background-size: content;
-  background-repeat: no-repeat;
+  box-shadow: 0 0 15px -6px;
 }
 
 .header {
+  position: relative;
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-color: #c7996d;
   background-size: 1200px 58px, cover;
-  background-position: left 0px bottom 0px, left 0px top -1px;
+  background-position: left 0px bottom -2px, left 0px top 0px;
   background-repeat: no-repeat, no-repeat;
 }
 
 .main-logo {
   position: absolute;
-  top: -1px;
   left: 530px;
 }
 
@@ -121,14 +117,22 @@ a.navigation-current {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.intro-picture {
+  margin: 76px 372px 72px 370px;
+}
+
 .advantage-list {
-  width: 1200px;
-  background-image: url("../img/background-mask.png");
+  padding: 45px 0 40px;
+  /* background-image: url("../img/background-mask.png"); */
   background-color: #ffffff;
   text-align: center;
 }
 
 .advantage-list h2 {
+  display: inline-block;
+  vertical-align: center;
+  width: 440px;
+  margin-bottom: 10px;
   font-size: 21px;
   font-weight: 700;
 }
