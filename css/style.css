@@ -141,8 +141,18 @@ a.navigation-current {
   color: #333333;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantage-row {
+  display: flex;
+  align-items: stretch;
+}
+
 .advantage {
-  width: 400px;
+  flex: 0 0 400px;
   text-align: center;
   line-height: 1.5em;
   color: #ffffff;
