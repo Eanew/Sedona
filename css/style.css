@@ -61,6 +61,7 @@ a {
 }
 
 .header {
+  position: relative;
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-color: #c7996d;
   background-size: 1200px 58px, cover;
@@ -70,8 +71,7 @@ a {
 
 .main-logo {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 530px;
 }
 
 .main-navigation {
@@ -358,6 +358,14 @@ span.calendar:last-of-type {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border: 2px solid transparent;
+  -moz-appearance: textfield;
+}
+
+.counter input::-webkit-outer-spin-button,
+.counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .counter-button {
@@ -369,19 +377,37 @@ span.calendar:last-of-type {
   border: none;
 }
 
-.counter button:nth-of-type(2n)::before,
-.counter button:nth-of-type(2n)::after {
+.counter button:nth-of-type(2n)::before {
   position: absolute;
   content: "";
-  top: 17px;
-  left: 13px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 11px;
   height: 3px;
-  background-color: #000000;
+  background-color: #cacaca;
 }
 
 .counter button:nth-of-type(2n)::after {
-  transform: rotate(90deg);
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 3px;
+  height: 11px;
+  background-color: #cacaca;
+}
+
+.counter button:nth-of-type(2n-1)::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 12px;
+  height: 3px;
+  background-color: #cacaca;
 }
 
 .counter button:first-of-type {
