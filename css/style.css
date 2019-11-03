@@ -55,18 +55,10 @@ a {
 }
 
 .content {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px -6px;
-}
-
-.header {
-  position: relative;
-  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
-  background-color: #c7996d;
-  background-size: 1200px 58px, cover;
-  background-position: left 0px bottom -2px, left 0px top 0px;
-  background-repeat: no-repeat, no-repeat;
 }
 
 .main-logo {
@@ -114,6 +106,14 @@ a.navigation-current {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.intro {
+  background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
+  background-color: #c7996d;
+  background-size: 1200px 58px, cover;
+  background-position: left 0px bottom 0px, left 0px top 0px;
+  background-repeat: no-repeat, no-repeat;
+}
+
 .intro-picture {
   margin: 76px 372px 72px 370px;
 }
@@ -135,11 +135,6 @@ a.navigation-current {
 
 .advantage-list p {
   color: #333333;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
 }
 
 .advantage-row {
@@ -190,10 +185,6 @@ a.navigation-current {
   flex: 0 0 800px;
   height: 256px;
   overflow: hidden;
-}
-
-.advantage-image img {
-  margin-top: -77px;
 }
 
 .advise {
