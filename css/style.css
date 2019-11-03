@@ -361,6 +361,7 @@ span.calendar:last-of-type {
 }
 
 .counter-button {
+  position: relative;
   flex: 0 0 38px;
   align-self: stretch;
   font-size: 0;
@@ -368,14 +369,19 @@ span.calendar:last-of-type {
   border: none;
 }
 
-.counter-button::before,
-.counter-button::after {
+.counter button:nth-of-type(2n)::before,
+.counter button:nth-of-type(2n)::after {
   position: absolute;
+  content: "";
   top: 17px;
   left: 13px;
   width: 11px;
   height: 3px;
   background-color: #000000;
+}
+
+.counter button:nth-of-type(2n)::after {
+  transform: rotate(90deg);
 }
 
 .counter button:first-of-type {
