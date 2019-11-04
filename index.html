@@ -16,7 +16,7 @@
       <header class="header">
 
         <a class="main-logo" href="" title="Вы на главной странице">
-            <img src="img/logo.png" width="139" height="70" alt="Логотип сайта">
+          <img src="img/logo.png" width="139" height="70" alt="Логотип сайта">
         </a>
 
         <nav class="main-navigation">
@@ -183,37 +183,46 @@
 
           <a class="button modal-button" href="">Поиск гостиницы в Седоне</a>
 
-          <form class="searchform" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="choose-date">
-              <span class="label">Дата заезда:</span>
-              <input type="text" name="date-in" placeholder="24 апреля 2017">
-            </label>
-            <span class="calendar">Календарь</span>
+          <div class="find-hotel">
 
-            <label class="choose-date">
-              <span class="label">Дата выезда:</span>
-              <input type="text" name="date-out" placeholder="4 июля 2017">
-            </label>
-            <span class="calendar">Календарь</span>
+            <form class="searchform" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="choose-date">
+                <span class="label">Дата заезда:</span>
+                <input type="text" name="date-in" placeholder="24 апреля 2017">
+              </label>
+              <span class="calendar">Календарь</span>
 
-            <div class="people-count">
-              <div class="counter">
-                <label for="adults" class="label">Взрослые:</label>
-                <button class="button counter-button" type="button">Меньше</button>
-                <input type="number" id="adults" name="adults" min="1" value="2">
-                <button class="button counter-button" type="button">Больше</button>
+              <label class="choose-date">
+                <span class="label">Дата выезда:</span>
+                <input type="text" name="date-out" placeholder="4 июля 2017">
+              </label>
+              <span class="calendar">Календарь</span>
+
+              <div class="people-count">
+                <div class="counter">
+                  <label for="adults" class="label">Взрослые:</label>
+                  <button class="button counter-button" type="button">Меньше</button>
+                  <input type="number" id="adults" name="adults" min="1" value="2">
+                  <button class="button counter-button" type="button">Больше</button>
+                </div>
+
+                <div class="counter">
+                  <label for="kids" class="label">Дети:</label>
+                  <button class="button counter-button" type="button">Меньше</button>
+                  <input type="number" id="kids" name="kids" min="0" value="0">
+                  <button class="button counter-button" type="button">Больше</button>
+                </div>
               </div>
 
-              <div class="counter">
-                <label for="kids" class="label">Дети:</label>
-                <button class="button counter-button" type="button">Меньше</button>
-                <input type="number" id="kids" name="kids" min="0" value="0">
-                <button class="button counter-button" type="button">Больше</button>
-              </div>
+              <button class="button searchform-button" type="submit">Найти</button>
+
+            </form>
+
+            <div class="map-container">
+
             </div>
 
-            <button class="button searchform-button" type="submit">Найти</button>
-          </form>
+          </div>
         </section>
 
       </main>
