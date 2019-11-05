@@ -118,25 +118,30 @@
               </label>
             </fieldset>
 
-            <div class="filter-container">
+            <div class="filter-range">
               <fieldset class="price-column">
                 <legend class="filter-legend">Стоимость в сутки (Р):</legend>
                 <div class="price-range">
                   <label class="price-count">
                     <span class="label">от</span>
-                    <input type="number" name="price-from" value="0" readonly>
+                    <input type="number" name="price-from" value="0">
                   </label>
                   <label class="price-count">
-                      <span class="label">до</span>
-                      <input type="number" name="price-to" value="3000" readonly>
+                    <span class="label">до</span>
+                    <input type="number" name="price-to" value="3000">
                   </label>
                 </div>
 
                 <div class="range-slider">
-                  <div class="price-line"></div>
-                  <div class="price-line active"></div>
-                  <button class="slider-button range-from" type="button">Ползунок выбора минимальной цены</button>
-                  <button class="slider-button range-to" type="button">Ползунок выбора максимальной цены</button>
+                  <div class="price-line">
+                    <div class="price-line-active"></div>
+                  </div>
+                  <div class="slider-button min-price">
+                    <span class="visually-hidden">Ползунок выбора минимальной цены</span>
+                  </div>
+                  <div class="slider-button max-price">
+                    <span class="visually-hidden">Ползунок выбора максимальной цены</span>
+                  </div>
                 </div>
               </fieldset>
               <button class="button show-results" type="submit">Показать</button>
