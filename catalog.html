@@ -34,10 +34,10 @@
 
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li><a href="">Информация</a></li>
-            <li><a href="">Фото и видео</a></li>
-            <li><a href="">Карта штата</a></li>
-            <li><a class="navigation-current" href="" title="Текущая страница">Гостиницы</a></li>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a class="navigation-current" href="#" title="Текущая страница">Гостиницы</a></li>
           </ul>
         </nav>
 
@@ -53,7 +53,7 @@
             <fieldset class="checkbox-column">
               <legend class="filter-legend">Инфраструктура:</legend>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="pool" value="" checked>
+                <input type="checkbox" class="checkbox-hidden" name="pool" value="" checked>
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -63,7 +63,7 @@
                 <span class="checkbox-label">Бассейн</span>
               </label>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="parking" value="">
+                <input type="checkbox" class="checkbox-hidden" name="parking" value="">
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -73,7 +73,7 @@
                 <span class="checkbox-label">Парковка</span>
               </label>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="wi-fi" value="">
+                <input type="checkbox" class="checkbox-hidden" name="wi-fi" value="">
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -87,7 +87,7 @@
             <fieldset class="checkbox-column">
               <legend class="filter-legend">Тип жилья:</legend>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="hotel" value="" checked>
+                <input type="checkbox" class="checkbox-hidden" name="hotel" value="" checked>
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -97,7 +97,7 @@
                 <span class="checkbox-label">Гостиница</span>
               </label>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="motel" value="" checked>
+                <input type="checkbox" class="checkbox-hidden" name="motel" value="" checked>
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -107,7 +107,7 @@
                 <span class="checkbox-label">Мотель</span>
               </label>
               <label class="checkbox-container">
-                <input type="checkbox" class="visually-hidden" name="apartments" value="" checked>
+                <input type="checkbox" class="checkbox-hidden" name="apartments" value="" checked>
                 <svg class="checkbox-on" width="27" height="23">
                   <use xlink:href="#checkbox-on"></use>
                 </svg>
@@ -144,7 +144,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button class="button show-results" type="submit">Показать</button>
+              <button class="show-results-button" type="submit">Показать</button>
             </div>
           </form>
         </section>
@@ -152,9 +152,9 @@
         <section class="filter-results">
           <h2 class="visually-hidden">Результаты поиска</h2>
           <div class="sorting">
-            <span class="hotels-found">
+            <p class="hotels-found">
               Найдено: <span class="results-count">3</span>
-            </span>
+            </p>
             <h3 class="sorting-header">Сортировка:</h3>
             <ul class="sorting-select">
               <li class="sorting-type sorting-type-current">
@@ -171,7 +171,7 @@
             </ul>
             <ul class="sorting-select">
               <li class="sorting-mode">
-                <a class="sorting-direction ascending" href="" title="По возрастанию">
+                <a class="sorting-direction ascending" href="#" title="По возрастанию">
                   <span class="visually-hidden">По возрастанию</span>
                   <svg class="sorting-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 0L0 10h11z"/>
@@ -179,7 +179,7 @@
                 </a>
               </li>
               <li class="sorting-mode">
-                <a class="sorting-direction descending sorting-direction-current" href="" title="По убыванию">
+                <a class="sorting-direction descending sorting-direction-current" href="#" title="По убыванию">
                   <span class="visually-hidden">По убыванию</span>
                   <svg class="sorting-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 10L0 0h11"/>
@@ -197,7 +197,7 @@
 
               <div class="details-container">
                 <h4 class="hotel-heading">
-                  <a href="">Amara Resort & Spa</a>
+                  <a href="#">Amara Resort & Spa</a>
                 </h4>
 
                 <div class="short-info">
@@ -206,22 +206,22 @@
                 </div>
 
                 <div class="preview-buttons">
-                  <a class="preview-button" href="">Подробнее</a>
-                  <a class="preview-button preview-button-different" href="">Забронировать</a>
+                  <a class="preview-button" href="#">Подробнее</a>
+                  <a class="preview-button preview-button-different" href="#">Забронировать</a>
                 </div>
               </div>
 
               <div class="hotel-rating">
                 <div class="stars" aria-label="4 звезды">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
                 </div>
 
-                <span class="rating">
+                <div class="rating">
                   Рейтинг: <span class="rating-score">8,5</span>
-                </span>
+                </div>
               </div>
             </li>
 
@@ -232,7 +232,7 @@
 
               <div class="details-container">
                 <h4 class="hotel-heading">
-                  <a href="">Desert Quail Inn</a>
+                  <a href="#">Desert Quail Inn</a>
                 </h4>
 
                 <div class="short-info">
@@ -241,21 +241,21 @@
                 </div>
 
                 <div class="preview-buttons">
-                  <a class="preview-button" href="">Подробнее</a>
-                  <a class="preview-button preview-button-different" href="">Забронировать</a>
+                  <a class="preview-button" href="#">Подробнее</a>
+                  <a class="preview-button preview-button-different" href="#">Забронировать</a>
                 </div>
               </div>
 
               <div class="hotel-rating">
                 <div class="stars" aria-label="3 звезды">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
                 </div>
 
-                <span class="rating">
+                <div class="rating">
                   Рейтинг: <span class="rating-score">8,9</span>
-                </span>
+                </div>
               </div>
             </li>
 
@@ -266,7 +266,7 @@
 
               <div class="details-container">
                 <h4 class="hotel-heading">
-                  <a href="">Villas at Poco Diablo</a>
+                  <a href="#">Villas at Poco Diablo</a>
                 </h4>
 
                 <div class="short-info">
@@ -275,20 +275,20 @@
                 </div>
 
                 <div class="preview-buttons">
-                  <a class="preview-button" href="">Подробнее</a>
-                  <a class="preview-button preview-button-different" href="">Забронировать</a>
+                  <a class="preview-button" href="#">Подробнее</a>
+                  <a class="preview-button preview-button-different" href="#">Забронировать</a>
                 </div>
               </div>
 
               <div class="hotel-rating">
                 <div class="stars" aria-label="2 звезды">
-                  <span class="star"></span>
-                  <span class="star"></span>
+                  <div class="star"></div>
+                  <div class="star"></div>
                 </div>
 
-                <span class="rating">
+                <div class="rating">
                   Рейтинг: <span class="rating-score">9,2</span>
-                </span>
+                </div>
               </div>
             </li>
           </ul>
@@ -302,25 +302,25 @@
 
         <ul class="visit-us">
           <li>
-            <a class="social" href="" title="twitter">
+            <a class="social" href="#" title="twitter">
               <span class="visually-hidden">Twitter</span>
-              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
+              <svg class="social-icon twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
                 <path fill="#ffffff" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
               </svg>
             </a>
           </li>
           <li>
-            <a class="social" href="" title="facebook">
+            <a class="social" href="#" title="facebook">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+              <svg class="social-icon facebook" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
                 <path fill="#ffffff" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
               </svg>
             </a>
           </li>
           <li>
-            <a class="social" href="" title="youtube">
+            <a class="social" href="#" title="youtube">
               <span class="visually-hidden">Youtube</span>
-              <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+              <svg class="social-icon youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
                 <path fill="#ffffff" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
               </svg>
             </a>

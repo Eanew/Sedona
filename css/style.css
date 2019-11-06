@@ -16,8 +16,8 @@
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"), /* Super Modern Browsers */
        url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff"), /* Modern Browsers */
 }
-/* :not(:focus):not(:active) */
-.visually-hidden {
+
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -63,7 +63,7 @@ a {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px -3px rgba(134, 134, 134, 0.7);
 }
 
 .main-logo {
@@ -115,7 +115,7 @@ a.navigation-current {
   background-image: url("../img/bg-mask.svg"), url("../img/background-photo.jpg");
   background-color: #c7996d;
   background-size: 1200px 57px, cover;
-  background-position: left 0px bottom -1px, left 0px top -56px;
+  background-position: left 0 bottom -1px, left 0 top -56px;
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -132,7 +132,7 @@ a.navigation-current {
 .advantage-list h2 {
   display: inline-block;
   vertical-align: middle;
-  width: 440px;
+  width: 460px;
   margin-bottom: 10px;
   font-size: 21px;
   font-weight: 700;
@@ -173,7 +173,7 @@ a.navigation-current {
 }
 
 .advantage h3 {
-  margin: 0 125px;
+  margin: 0 122px;
   font-size: 21px;
   font-weight: 700;
 }
@@ -222,7 +222,7 @@ a.navigation-current {
 }
 
 .advise dd {
-  margin: 0 58px;
+  margin: 0 50px;
 }
 
 .hotel-search {
@@ -245,7 +245,7 @@ a.navigation-current {
 .modal-button {
   width: 568px;
   margin: 35px 316px 0;
-  padding: 30px 139px;
+  padding: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #ffffff;
@@ -274,19 +274,29 @@ a.navigation-current {
 .search-form {
   position: absolute;
   z-index: 4;
-  /* display: none; */
   width: 568px;
-  /* margin: 0 316px; */
   left: 316px;
   padding: 55px;
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .search-form .label {
+  display: inline-block;
+  vertical-align: center;
   font-weight: 700;
   text-align: left;
   color: #000000;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.date-in {
+  padding-right: 22px;
+}
+
+.date-out {
+  padding-right: 18px;
 }
 
 .choose-date {
@@ -296,7 +306,7 @@ a.navigation-current {
 }
 
 .choose-date input {
-  flex: 0 0 346px;
+  flex: 0 1 346px;
   margin-left: auto;
   padding: 10px 12px;
   font-weight: 700;
@@ -317,8 +327,8 @@ a.navigation-current {
 
 .calendar-link {
   position: absolute;
-  right: 64px;
-  top: 131px;
+  right: 11%;
+  top: 33%;
   width: 21px;
   height: 22px;
   display: inline-block;
@@ -326,8 +336,18 @@ a.navigation-current {
   background-color: transparent;
 }
 
+.calendar-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 a.calendar-link:first-of-type {
-  top: 63px;
+  top: 16%;
 }
 
 .calendar {
@@ -345,20 +365,26 @@ a.calendar-link:first-of-type {
 
 .people-count {
   display: flex;
+  justify-content: space-between;
 }
 
 .counter {
   flex: 0 0 50%;
   display: flex;
   align-items: baseline;
+  justify-content: flex-end;
 }
 
-.counter:first-child {
-  padding-right: 3px;
+.counter:first-child .counter-button-more {
+  margin-right: 3px;
 }
 
-.counter:last-child {
-  padding-left: 53px;
+.counter:first-child .label {
+  margin-right: 41px;
+}
+
+.counter:last-child .label {
+  margin-right: 27px;
 }
 
 .counter input {
@@ -381,15 +407,10 @@ a.calendar-link:first-of-type {
 
 .counter-button {
   position: relative;
-  flex: 0 0 38px;
+  width: 38px;
   align-self: stretch;
-  font-size: 0;
   background-color: #f2f2f2;
   border: none;
-}
-
-.counter-button-less {
-  margin-left: auto;
 }
 
 .counter-button-less::before {
@@ -487,18 +508,18 @@ a.calendar-link:first-of-type {
   position: relative;
   z-index: 5;
   width: 100%;
-  opacity: 0.9;
-  padding: 24px 0 14px;
+  padding: 36px 101px 30px 133px;
   display: flex;
-  align-items: center;
-  background-color: #ffffff;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .hash-tag {
   font-size: 21px;
   font-weight: 700;
   text-align: center;
-  margin: 0 0 8px 132px;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .visit-us li {
@@ -508,7 +529,8 @@ a.calendar-link:first-of-type {
 .visit-us {
   width: 150px;
   list-style: none;
-  margin-left: 257px;
+  margin: 0;
+  margin-left: 256px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -522,6 +544,10 @@ a.calendar-link:first-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.twitter {
+  margin-top: 1px;
 }
 
 .social:hover,
@@ -538,8 +564,7 @@ a.calendar-link:first-of-type {
 }
 
 .copyright {
-  width: 196px;
-  margin: 0px 102px 0px auto;
+  margin: 4px 0 0 auto;
   text-align: center;
   display: flex;
   align-items: flex-start;
@@ -547,11 +572,26 @@ a.calendar-link:first-of-type {
 }
 
 .copyright span {
-  margin-top: 7px;
+  margin-top: 6px;
+  margin-right: 8px;
 }
 
 .copyright-icon {
   fill: #231f20;
+}
+
+.htmlacademy-logo {
+  position: relative;
+}
+
+.htmlacademy-logo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .htmlacademy-logo:hover .copyright-icon,
@@ -595,10 +635,6 @@ a.calendar-link:first-of-type {
   margin-bottom: 0;
 }
 
-/* .checkbox-container:last-child input {
-  top: -1px;
-} */
-
 .checkbox-on,
 .checkbox-off {
   position: absolute;
@@ -616,16 +652,26 @@ top: 1px;
   display: none;
 }
 
-.checkbox-container input[type="checkbox"]:checked + .checkbox-on {
+.checkbox-hidden {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.checkbox-hidden:checked + .checkbox-on {
   display: block;
 }
 
-.checkbox-container input[type="checkbox"]:checked + .checkbox-on + .checkbox-off {
+.checkbox-hidden:checked + .checkbox-on + .checkbox-off {
   display: none;
 }
 
-.checkbox-container input[type="checkbox"]:disabled + .checkbox-on,
-.checkbox-container input[type="checkbox"]:disabled + .checkbox-on + .checkbox-off {
+.checkbox-hidden:disabled + .checkbox-on,
+.checkbox-hidden:disabled + .checkbox-on + .checkbox-off {
   fill: #6a6a6a;
 }
 
@@ -664,7 +710,7 @@ top: 1px;
   position: relative;
   height: 36px;
   margin-bottom: 20px;
-  padding-top: 5px;
+  padding-top: 6px;
   border: 2px solid #ffffff;
   border-radius: 2px;
   font-size: 0;
@@ -679,7 +725,7 @@ top: 1px;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   margin-left: 1px;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .price-count {
@@ -704,9 +750,10 @@ top: 1px;
   width: 50px;
   margin: 0;
   color: inherit;
-  font: inherit;
+  font-size: inherit;
   background: none;
   border: none;
+  -moz-appearance: textfield;
 }
 
 .price-count input::-webkit-outer-spin-button,
@@ -729,7 +776,7 @@ top: 1px;
 .price-line-active {
   width: 252px;
   height: 2px;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .slider-button {
@@ -737,7 +784,7 @@ top: 1px;
   top: -9px;
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
@@ -763,18 +810,17 @@ top: 1px;
   background-color: #ababab;
 }
 
-.slider-button:hover,
-.slider-button:focus {
+.slider-button:hover {
   margin-top: -1px;
   margin-left: -1px;
   width: 22px;
   height: 22px;
 }
 
-.show-results {
+.show-results-button {
   line-height: 1.5em;
   text-transform: uppercase;
-  background: transparent;
+  background-color: transparent;
   display: block;
   margin: 0;
   margin-left: 97px;
@@ -785,8 +831,8 @@ top: 1px;
   cursor: pointer;
 }
 
-.show-results:hover,
-.show-results:focus {
+.show-results-button:hover,
+.show-results-button:focus {
   color: #000000;
   background-color: #ffffff;
 }
@@ -802,6 +848,7 @@ top: 1px;
 }
 
 .hotels-found {
+  margin: 0;
   font-size: 21px;
   font-weight: 700;
   align-self: center;
@@ -863,6 +910,20 @@ top: 1px;
 
 .sorting-icon {
   fill: #cacaca;
+}
+
+.sorting-direction {
+  position: relative;
+}
+
+.sorting-direction::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .sorting-direction:hover .sorting-icon,
@@ -985,6 +1046,7 @@ top: 1px;
 .star {
   flex: 0 0 18px;
   height: 17px;
+  margin: 0;
   margin-left: 5px;
   background-image: url("../img/star.svg");
 }
@@ -996,9 +1058,4 @@ top: 1px;
   line-height: 1.5em;
   color: #666666;
   background-color: #f2f2f2;
-  line-height: 1.5em;
-  color: #666666;
-  background-color: #f2f2f2;
-  display: inline-block;
-  vertical-align: bottom;
 }
