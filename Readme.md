@@ -1,7 +1,5 @@
 # Sedona
 
-## Описание
-
 Семантическая кроссбраузерная вёрстка 2-страничного лендинга без использования JavaScript
 
 <img width="769" alt="Preview" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/layout-preview/sedona-preview.jpg">
